@@ -27,7 +27,7 @@ public class PricingServiceApplication {
         SpringApplication.run(PricingServiceApplication.class, args);
     }
 
-    private static BigDecimal randomPrice() {
+    public static BigDecimal randomPrice() {
         return new BigDecimal(ThreadLocalRandom.current().nextDouble(1, 5))
                 .multiply(new BigDecimal(5000d)).setScale(2, RoundingMode.HALF_UP);
     }
